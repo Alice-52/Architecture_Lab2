@@ -4,7 +4,7 @@ import os
 import time
 
 
-# Named channel
+# Named channel - First In First Out
 fifo = '/tmp/my_fifo'
 
 # Making the path to channel, using os paths (FIFO)
