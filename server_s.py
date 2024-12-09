@@ -166,10 +166,10 @@ def main():
 	    traceback.print_exc()
             # Breaking the loop, because of the error
 	    break
-
-    # Clean up the mess and close the server socket
-    server_socket.close()
-    print("Server has shut down, sowy.")
+	finally:
+    	    # Clean up the mess and close the server socket
+    	    server_socket.close()
+    	    print("Server has shut down, sowy.")
 
 
 # Ensure that the main function is called only when the script is executed directly
