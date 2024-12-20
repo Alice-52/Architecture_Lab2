@@ -135,9 +135,6 @@ def main():
             # Many clients in the same time
             Thread(target=handle_client, args=(conn, addr)).start()
 
-    except KeyboardInterrupt:
-        # Handle server shutdown by the user (Ctrl+C)
-        logging.info("Server stopped by user.")
     except OSError as e:
         # Log operating system errors
         logging.error(f"OS error: {e}")
