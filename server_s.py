@@ -47,6 +47,9 @@ def handle_client(conn, addr):
                     conn.sendall(response.encode()) 
                     # Print that the response has been sent
                     logging.info(f"Response sent to client {addr}: pong")
+                elif data.strip().lower() == "exit":
+                    logging.info(f"Client {addr} disconnected by exit command.")
+                    break
                 else:
                     # If the message is not recognized, send an error message back to the client
                     conn.sendall("Invalid input. Expected 'ping'.".encode())
