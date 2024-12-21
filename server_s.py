@@ -124,7 +124,7 @@ def main():
             # Check if the maximum number of connections has been reached
             if active_clients >= max_clients:
                 logging.warning(f"Client {addr} tried to connect, but the server is busy.")
-                conn.sendall("Server is busy. Please try later.".encode())
+                conn.sendall("The server is busy. Please try again later.".encode())
                 conn.close()
                 continue
 

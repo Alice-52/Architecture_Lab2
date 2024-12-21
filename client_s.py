@@ -84,5 +84,5 @@ def main():
                 client_socket.close()
 
 # Ensure the main function runs when the script is executed
-if name == "main":
+if __name__ == "main":
     main()
