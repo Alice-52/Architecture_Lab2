@@ -50,6 +50,7 @@ def main():
                     # Check if the user wants to exit the client
                     if message.lower() == "exit":
                         print("Exiting the client.")
+                        client_socket.sendall(message.encode('utf-8'))
                         client_socket.close()
                         sys.exit(0)
 
